@@ -33,8 +33,8 @@ def draw_big_box():
 def draw_door_knobs():
     glPointSize(10)
     glBegin(GL_POINTS)
-    glVertex2f(200, 100)
-    glVertex2f(300, 100)
+    glVertex2f(150, 350)
+    glVertex2f(350, 350)
     glEnd()
 
 
@@ -89,7 +89,7 @@ def show_screen():
 
 glutInit()
 glutInitDisplayMode(GLUT_RGBA)
-glutInitWindowSize(1000, 1000)
+glutInitWindowSize(700, 700)
 glutInitWindowPosition(0, 0)
 wind = glutCreateWindow("Lab01_Task02_19101077")
 glutDisplayFunc(show_screen)
