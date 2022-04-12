@@ -65,8 +65,8 @@ def showScreen():
 
     MidpointCircle(radius / 2, x + 75, y )
     MidpointCircle(radius / 2, x - 75, y )
-    MidpointCircle(radius / 2, x , y - 75)
-    MidpointCircle(radius / 2, x , y + 75)
+    MidpointCircle(radius / 2, x, y - 75)
+    MidpointCircle(radius / 2, x, y + 75)
 
     glutSwapBuffers()
 
