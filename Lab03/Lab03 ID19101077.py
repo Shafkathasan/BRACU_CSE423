@@ -2,17 +2,12 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
-def MidpointCircle(r, x0, y0):
-    d = 1 - r
+def MidpointCircle(radius, x0, y0):
+    d = 1 - radius
     x = 0
-    y = r
+    y = radius
 
-    d = dy - dx
-    x,y= x0,y0
-
-    glBegin(GL_POINTS)
-    glVertex2f(x, y)
-    # iterate through value of y
+    Circlepoints(x, y, x0 ,y0)
     while (x < y):
         if (d < 0):
             #choose E
@@ -20,11 +15,23 @@ def MidpointCircle(r, x0, y0):
             x = x + 1
         else:
             # choose SE
-            d = d + 2*x - 2*y + 3
+            d = d + 2*x - 2*y + 5
+            x = x + 1
             y = y - 1
 
-        glVertex2f(x,y)
-    glEnd()
+        Circlepoints(x, y, x0, y0)
+
+def Circlepoints(x, y, x0, y0):
+
+    draw_points(x + x0, y + y0)
+    draw_points(y + y0, x + x0)
+    draw_points(y + y0, -x + x0)
+    draw_points(x + x0, -y + y0)
+    draw_points(-x + x0, -y + y0)
+    draw_points(-y + y0, -x + x0)
+    draw_points(-y + y0, x + x0)
+    draw_points(-x + x0, y + y0)
+
 
 def draw_points(x, y):
     glPointSize(5) #pixel size. by default 1 thake
@@ -47,7 +54,10 @@ def showScreen():
     iterate()
     glColor3f(1.0, 1.0, 0.0) #konokichur color set (RGB)
     #call the draw methods here
-    draw_points(250, 250)
+    MidpointCircle(150, 250, 250)
+    MidpointCircle(37.5, 250-37.5, 250)
+    MidpointCircle(37.5, 250, 250)
+
     glutSwapBuffers()
 
 
