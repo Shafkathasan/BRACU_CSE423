@@ -34,7 +34,7 @@ def Circlepoints(x, y, x0, y0):
 
 
 def draw_points(x, y):
-    glPointSize(5) #pixel size. by default 1 thake
+    glPointSize(3) #pixel size. by default 1 thake
     glBegin(GL_POINTS)
     glVertex2f(x,y) #jekhane show korbe pixel
     glEnd()
@@ -54,9 +54,19 @@ def showScreen():
     iterate()
     glColor3f(1.0, 1.0, 0.0) #konokichur color set (RGB)
     #call the draw methods here
-    MidpointCircle(150, 250, 250)
-    MidpointCircle(37.5, 250-37.5, 250)
-    MidpointCircle(37.5, 250, 250)
+    x = 250
+    y = 250
+    radius = 150
+    MidpointCircle(radius, x, y)
+    MidpointCircle(radius / 2, x + 53, y + 53)
+    MidpointCircle(radius / 2, x - 53, y - 53)
+    MidpointCircle(radius / 2, x + 53, y - 53)
+    MidpointCircle(radius / 2, x - 53, y + 53)
+
+    MidpointCircle(radius / 2, x + 75, y )
+    MidpointCircle(radius / 2, x - 75, y )
+    MidpointCircle(radius / 2, x , y - 75)
+    MidpointCircle(radius / 2, x , y + 75)
 
     glutSwapBuffers()
 
