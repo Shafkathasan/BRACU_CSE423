@@ -7,4 +7,5 @@ This are the Labs & Assignments codes for CSE423: COMPUTER GRAPHICS. There are l
   <li>(DDA) Line Drawing Algorithm</li>
   <li>Midpoint Line Drawing Algorithm</li>
   <li>Midpoint Circle Drawing Algorithm</li>
+  <li>8-way Symmetry</li>
 </ul>
