@@ -4,6 +4,7 @@ This are the Labs & Assignments codes for CSE423: COMPUTER GRAPHICS. There are l
 
 <h2>Topics</h2>
   <ul>
+  <li>OpenGL libraries in Python</li>
   <li>(DDA) Line Drawing Algorithm</li>
   <li>Midpoint Line Drawing Algorithm</li>
   <li>Midpoint Circle Drawing Algorithm</li>
